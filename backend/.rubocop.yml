@@ -1,0 +1,19 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+
+## 全体に適応する項目を定義。Excludeに設定したファイルはチェック対象外になる。
+AllCops:
+  TargetRubyVersion: 2.7.7
+  TargetRailsVersion: 6.1.7
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+
+## 日本語コメントを許可する。
+Style/AsciiComments:
+  Enabled: false
